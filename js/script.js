@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Actualizar dots
     cfDots.forEach((dot, i) => {
       dot.classList.toggle('active', i === activeIndex);
-      dot.setAttribute('aria-selected', String(i === activeIndex));
+      dot.setAttribute('aria-current', String(i === activeIndex));
     });
 
     // Anunciar a lector de pantalla

@@ -25,7 +25,7 @@
          WCAG 2.2: <nav> con aria-label identifica la región de navegación.
          Enlaces de ancla para single-page.
     ============================================================ -->
-    <header class="site-header" role="banner">
+    <header class="site-header">
         <div class="header-container">
             <a href="#inicio" class="logo" aria-label="Punta Cana - Ir al inicio">
                 <!-- Logo textual con icono decorativo -->
@@ -42,7 +42,7 @@
                 <span class="hamburger-line" aria-hidden="true"></span>
             </button>
             <nav aria-label="Navegación principal" id="nav-principal">
-                <ul class="nav-list" role="list">
+                <ul class="nav-list">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#sobre" class="nav-link">Descubre</a></li>
                     <li><a href="#galeria" class="nav-link">Galería</a></li>
@@ -122,8 +122,8 @@
                     <h2 id="galeria-titulo" class="section-title section-title--light">Galería Fotográfica</h2>
                     <p class="section-subtitle section-subtitle--light">Cada rincón de Punta Cana es una postal. Descubre los paisajes que te esperan.</p>
                 </header>
-                <div class="coverflow" aria-roledescription="carrusel" aria-label="Galería de fotos de Punta Cana" id="coverflow">
-                    <div class="coverflow-stage" id="coverflow-stage">
+                <div class="coverflow" role="region" aria-roledescription="carrusel" aria-label="Galería de fotos de Punta Cana" id="coverflow">
+                    <div class="coverflow-stage" id="coverflow-stage" role="tabpanel" aria-label="Carrusel de imágenes">
                         <figure class="coverflow-item" data-index="0">
                             <img src="assets/images/gallery-1.png" alt="Vista aérea de la costa de Punta Cana con resorts junto a la playa de arena blanca y mar turquesa">
                             <figcaption class="coverflow-caption"><strong>Playa Bávaro</strong><span>La costa caribeña desde el cielo</span></figcaption>
@@ -190,7 +190,7 @@
                 </header>
                 <div class="media-duo">
                     <!-- VÍDEO — compacto -->
-                    <div class="media-panel media-panel--video" aria-labelledby="video-titulo">
+                    <div class="media-panel media-panel--video" role="region" aria-labelledby="video-titulo">
                         <div class="media-panel-header">
                             <span class="media-badge" aria-hidden="true">▶ Vídeo</span>
                             <h3 id="video-titulo">Vídeo Promocional</h3>
@@ -206,7 +206,7 @@
                         </div>
                     </div>
                     <!-- AUDIO — compacto -->
-                    <div class="media-panel media-panel--audio" aria-labelledby="audio-titulo">
+                    <div class="media-panel media-panel--audio" role="region" aria-labelledby="audio-titulo">
                         <div class="audio-deco" aria-hidden="true">
                             <div class="audio-wave">
                                 <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
@@ -252,7 +252,7 @@
                             <legend>Elige una imagen para tu postal</legend>
                             <div class="postal-images-grid">
                                 <div class="postal-option">
-                                    <input type="radio" name="postal-imagen" id="postal-img-1" value="postal-1" required aria-required="true">
+                                    <input type="radio" name="postal-imagen" id="postal-img-1" value="postal-1" required>
                                     <!-- WCAG 2.2 (1.1.1, 4.1.2): label envuelve la imagen y texto descriptivo -->
                                     <label for="postal-img-1">
                                         <img src="assets/images/postal-1.png" alt="Postal de playa Bávaro con palmera sobre arena blanca" width="300" height="300" loading="lazy">
@@ -292,7 +292,7 @@
                                 <!-- WCAG 2.2 (1.3.1, 3.3.2): Cada input tiene label asociado -->
                                 <label for="postal-nombre">Tu nombre <span class="required-mark" aria-hidden="true">*</span></label>
                                 <input type="text" id="postal-nombre" name="nombre"
-                                       required aria-required="true"
+                                       required
                                        aria-describedby="nombre-error"
                                        autocomplete="name"
                                        placeholder="Escribe tu nombre">
@@ -301,7 +301,7 @@
                             <div class="form-group">
                                 <label for="postal-email">Correo del destinatario <span class="required-mark" aria-hidden="true">*</span></label>
                                 <input type="email" id="postal-email" name="email"
-                                       required aria-required="true"
+                                       required
                                        aria-describedby="email-error"
                                        autocomplete="email"
                                        placeholder="correo@ejemplo.com">
@@ -310,7 +310,7 @@
                             <div class="form-group">
                                 <label for="postal-destinatario">Nombre del destinatario <span class="required-mark" aria-hidden="true">*</span></label>
                                 <input type="text" id="postal-destinatario" name="destinatario"
-                                       required aria-required="true"
+                                       required
                                        aria-describedby="destinatario-error"
                                        placeholder="¿A quién va dirigida?">
                                 <p id="destinatario-error" class="field-error" role="alert" hidden>Por favor, introduce el nombre del destinatario.</p>
@@ -318,7 +318,7 @@
                             <div class="form-group">
                                 <label for="postal-mensaje">Tu mensaje <span class="required-mark" aria-hidden="true">*</span></label>
                                 <textarea id="postal-mensaje" name="mensaje" rows="5"
-                                          required aria-required="true"
+                                          required
                                           aria-describedby="mensaje-error"
                                           placeholder="Escribe un bonito mensaje desde Punta Cana..."></textarea>
                                 <p id="mensaje-error" class="field-error" role="alert" hidden>Por favor, escribe un mensaje para tu postal.</p>
@@ -335,7 +335,7 @@
                     <div class="modal-content">
                         <h3 id="modal-titulo">¡Postal Enviada!</h3>
                         <p id="modal-mensaje">Tu postal desde Punta Cana ha sido enviada con éxito.</p>
-                        <div class="modal-postal-preview" id="modal-preview" aria-label="Vista previa de la postal enviada"></div>
+                        <div class="modal-postal-preview" role="region" id="modal-preview" aria-label="Vista previa de la postal enviada"></div>
                         <button type="button" class="btn btn-primary" id="modal-cerrar" autofocus>Cerrar</button>
                     </div>
                 </div>
@@ -357,7 +357,7 @@
             <div class="footer-col">
                 <h2 class="footer-title">Navegación</h2>
                 <nav aria-label="Navegación del pie de página">
-                    <ul class="footer-nav" role="list">
+                    <ul class="footer-nav">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#sobre">Descubre</a></li>
                         <li><a href="#galeria">Galería</a></li>

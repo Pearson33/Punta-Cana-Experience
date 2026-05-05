@@ -330,7 +330,7 @@ ul { list-style: none; }
   border-color: rgba(255,255,255,0.5);
   transform: scale(1.1);
 }
-.coverflow-dots { display: flex; gap: 8px; align-items: center; }
+.coverflow-dots { display: flex; gap: 12px; align-items: center; }
 .coverflow-dot {
   width: 10px; height: 10px; border-radius: 50%;
   border: 2px solid rgba(255,255,255,0.3);

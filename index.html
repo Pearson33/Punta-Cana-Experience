@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- WCAG 2.2: lang="es" permite a lectores de pantalla pronunciar correctamente el contenido -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- WCAG 2.2: viewport responsive para accesibilidad en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre Punta Cana, el paraíso tropical del Caribe dominicano. Playas de arena blanca, aguas cristalinas, cultura vibrante y aventuras inolvidables.">
+    <title>Punta Cana — Paraíso del Caribe | Turismo República Dominicana</title>
+    <!-- Tipografías Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ============================================================
+         WCAG 2.2 (2.4.1): Enlace "Saltar al contenido" para usuarios
+         de teclado y lectores de pantalla. Se hace visible con :focus.
+    ============================================================ -->
+    <a href="#contenido-principal" class="skip-link" id="skip-nav">Saltar al contenido principal</a>
+
+    <!-- ============================================================
+         HEADER Y NAVEGACIÓN
+         WCAG 2.2: <nav> con aria-label identifica la región de navegación.
+         Enlaces de ancla para single-page.
+    ============================================================ -->
+    <header class="site-header" role="banner">
+        <div class="header-container">
+            <a href="#inicio" class="logo" aria-label="Punta Cana - Ir al inicio">
+                <!-- Logo textual con icono decorativo -->
+                <span class="logo-icon" aria-hidden="true">🌴</span>
+                <span class="logo-text">Punta Cana</span>
+            </a>
+            <!-- Botón hamburguesa accesible para móvil -->
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-expanded="false"
+                    aria-controls="nav-principal"
+                    aria-label="Abrir menú de navegación">
+                <span class="hamburger-line" aria-hidden="true"></span>
+                <span class="hamburger-line" aria-hidden="true"></span>
+                <span class="hamburger-line" aria-hidden="true"></span>
+            </button>
+            <nav aria-label="Navegación principal" id="nav-principal">
+                <ul class="nav-list" role="list">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#sobre" class="nav-link">Descubre</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#multimedia" class="nav-link">Multimedia</a></li>
+                    <li><a href="#postal" class="nav-link nav-link--cta">Enviar Postal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         CONTENIDO PRINCIPAL
+         WCAG 2.2 (1.3.1): <main> identifica el contenido principal.
+         id="contenido-principal" es el destino del skip-link.
+    ============================================================ -->
+    <main id="contenido-principal">
+
+        <!-- ====== SECCIÓN HERO ====== -->
+        <section id="inicio" class="hero" aria-label="Bienvenida a Punta Cana">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <!-- WCAG 2.2 (1.3.1): Un solo <h1> por página -->
+                <h1 class="hero-title">Descubre el <span class="text-gradient">Paraíso</span> del Caribe</h1>
+                <p class="hero-subtitle">Punta Cana te espera con playas infinitas, aguas cristalinas y experiencias que recordarás para siempre.</p>
+                <div class="hero-actions">
+                    <a href="#galeria" class="btn btn-primary">Explorar Galería</a>
+                    <a href="#postal" class="btn btn-secondary">Enviar una Postal</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECCIÓN SOBRE / DESCUBRE ====== -->
+        <section id="sobre" class="section section-about" aria-labelledby="sobre-titulo">
+            <div class="container">
+                <header class="section-header">
+                    <!-- WCAG 2.2 (1.3.1): Jerarquía lógica h1 > h2 -->
+                    <h2 id="sobre-titulo" class="section-title">Descubre Punta Cana</h2>
+                    <p class="section-subtitle">Un destino que lo tiene todo: naturaleza, cultura, aventura y relax.</p>
+                </header>
+                <div class="about-grid">
+                    <article class="about-card" aria-labelledby="card-playas">
+                        <div class="about-card-icon" aria-hidden="true">🏖️</div>
+                        <h3 id="card-playas">Playas Paradisíacas</h3>
+                        <p>Más de 50 kilómetros de arena blanca y aguas turquesa. Playa Bávaro ha sido reconocida como una de las mejores playas del mundo, con su arena fina como el talco y palmeras cocoteras que bordean la costa.</p>
+                    </article>
+                    <article class="about-card" aria-labelledby="card-cultura">
+                        <div class="about-card-icon" aria-hidden="true">🎶</div>
+                        <h3 id="card-cultura">Cultura Vibrante</h3>
+                        <p>Sumérgete en la rica herencia dominicana. Desde el merengue y la bachata hasta la gastronomía local con platos como el mangú, el sancocho y los tostones, cada momento es una celebración de vida.</p>
+                    </article>
+                    <article class="about-card" aria-labelledby="card-aventura">
+                        <div class="about-card-icon" aria-hidden="true">🤿</div>
+                        <h3 id="card-aventura">Aventuras Acuáticas</h3>
+                        <p>Explora los arrecifes de coral en snorkel, navega en catamarán por aguas cristalinas, practica paddle surf o lánzate en tirolina sobre la selva tropical. La aventura no tiene límites.</p>
+                    </article>
+                    <article class="about-card" aria-labelledby="card-relax">
+                        <div class="about-card-icon" aria-hidden="true">🌅</div>
+                        <h3 id="card-relax">Relax y Bienestar</h3>
+                        <p>Desconecta en resorts de clase mundial con spas de lujo, piscinas infinitas y atardeceres que pintan el cielo de naranja y púrpura. El lugar perfecto para renovar cuerpo y alma.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECCIÓN GALERÍA — CARRUSEL COVERFLOW ======
+             Carrusel clásico: múltiples imágenes visibles, la activa centrada.
+             WCAG 2.2 (1.1.1): alt descriptivos. (2.1.1): navegable por teclado.
+        ====== -->
+        <section id="galeria" class="section section-gallery" aria-labelledby="galeria-titulo">
+            <div class="gallery-bg-decoration" aria-hidden="true">
+                <div class="gallery-glow gallery-glow--1"></div>
+                <div class="gallery-glow gallery-glow--2"></div>
+            </div>
+            <div class="container gallery-container">
+                <header class="section-header section-header--light">
+                    <span class="section-tag" aria-hidden="true">📸 Explora</span>
+                    <h2 id="galeria-titulo" class="section-title section-title--light">Galería Fotográfica</h2>
+                    <p class="section-subtitle section-subtitle--light">Cada rincón de Punta Cana es una postal. Descubre los paisajes que te esperan.</p>
+                </header>
+                <div class="coverflow" aria-roledescription="carrusel" aria-label="Galería de fotos de Punta Cana" id="coverflow">
+                    <div class="coverflow-stage" id="coverflow-stage">
+                        <figure class="coverflow-item" data-index="0">
+                            <img src="assets/images/gallery-1.png" alt="Vista aérea de la costa de Punta Cana con resorts junto a la playa de arena blanca y mar turquesa">
+                            <figcaption class="coverflow-caption"><strong>Playa Bávaro</strong><span>La costa caribeña desde el cielo</span></figcaption>
+                        </figure>
+                        <figure class="coverflow-item" data-index="1">
+                            <img src="assets/images/gallery-2.png" alt="Cóctel tropical de maracuyá con frutas en un bar de playa con palmeras de fondo">
+                            <figcaption class="coverflow-caption"><strong>Sabores Tropicales</strong><span>Cócteles al atardecer</span></figcaption>
+                        </figure>
+                        <figure class="coverflow-item" data-index="2">
+                            <img src="assets/images/gallery-3.png" alt="Arrecife de coral con peces tropicales de colores y buzos en aguas cristalinas">
+                            <figcaption class="coverflow-caption"><strong>Mundo Submarino</strong><span>Arrecifes de coral</span></figcaption>
+                        </figure>
+                        <figure class="coverflow-item" data-index="3">
+                            <img src="assets/images/gallery-6.png" alt="Piscina infinita de resort de lujo en Punta Cana al atardecer con palmeras y vista al mar Caribe">
+                            <figcaption class="coverflow-caption"><strong>Resort de Lujo</strong><span>Piscina infinita al atardecer</span></figcaption>
+                        </figure>
+                        <figure class="coverflow-item" data-index="4">
+                            <img src="assets/images/gallery-8.png" alt="Músicos dominicanos tocando merengue en una calle colonial de colores con flores tropicales">
+                            <figcaption class="coverflow-caption"><strong>Merengue Vivo</strong><span>Música en las calles</span></figcaption>
+                        </figure>
+                        <figure class="coverflow-item" data-index="5">
+                            <img src="assets/images/gallery-4.png" alt="Calle colonial dominicana con edificios de colores, palmeras y gente local">
+                            <figcaption class="coverflow-caption"><strong>Cultura Colonial</strong><span>Calles llenas de historia</span></figcaption>
+                        </figure>
+                        <figure class="coverflow-item" data-index="6">
+                            <img src="assets/images/gallery-5.png" alt="Atardecer romántico con hamacas de madera bajo una sombrilla de palma frente al mar">
+                            <figcaption class="coverflow-caption"><strong>Atardecer Dorado</strong><span>Magia frente al mar</span></figcaption>
+                        </figure>
+                        <figure class="coverflow-item" data-index="7">
+                            <img src="assets/images/gallery-7.png" alt="Playa paradisíaca con barcas de colores sobre arena blanca y agua turquesa cristalina">
+                            <figcaption class="coverflow-caption"><strong>Playa Virgen</strong><span>Barcas al amanecer</span></figcaption>
+                        </figure>
+                    </div>
+                    <!-- Controles -->
+                    <div class="coverflow-controls">
+                        <button class="coverflow-btn" id="coverflow-prev" aria-label="Imagen anterior"><span aria-hidden="true">‹</span></button>
+                        <div class="coverflow-dots" role="tablist" aria-label="Elegir imagen">
+                            <button class="coverflow-dot active" role="tab" aria-selected="true" aria-label="Imagen 1" data-index="0"></button>
+                            <button class="coverflow-dot" role="tab" aria-selected="false" aria-label="Imagen 2" data-index="1"></button>
+                            <button class="coverflow-dot" role="tab" aria-selected="false" aria-label="Imagen 3" data-index="2"></button>
+                            <button class="coverflow-dot" role="tab" aria-selected="false" aria-label="Imagen 4" data-index="3"></button>
+                            <button class="coverflow-dot" role="tab" aria-selected="false" aria-label="Imagen 5" data-index="4"></button>
+                            <button class="coverflow-dot" role="tab" aria-selected="false" aria-label="Imagen 6" data-index="5"></button>
+                            <button class="coverflow-dot" role="tab" aria-selected="false" aria-label="Imagen 7" data-index="6"></button>
+                            <button class="coverflow-dot" role="tab" aria-selected="false" aria-label="Imagen 8" data-index="7"></button>
+                        </div>
+                        <button class="coverflow-btn" id="coverflow-next" aria-label="Imagen siguiente"><span aria-hidden="true">›</span></button>
+                    </div>
+                    <div id="coverflow-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECCIÓN MULTIMEDIA ======
+             Diseño inmersivo con fondo oscuro, video compacto y audio integrado.
+             WCAG 2.2 (1.2.1–1.2.5): Controles nativos, subtítulos, descripciones.
+        ====== -->
+        <section id="multimedia" class="section section-media" aria-labelledby="multimedia-titulo">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-tag section-tag--dark" aria-hidden="true">🎬 Experiencia</span>
+                    <h2 id="multimedia-titulo" class="section-title">Siente Punta Cana</h2>
+                    <p class="section-subtitle">Más allá de las imágenes: sumérgete en los sonidos y paisajes en movimiento del Caribe.</p>
+                </header>
+                <div class="media-duo">
+                    <!-- VÍDEO — compacto -->
+                    <div class="media-panel media-panel--video" aria-labelledby="video-titulo">
+                        <div class="media-panel-header">
+                            <span class="media-badge" aria-hidden="true">▶ Vídeo</span>
+                            <h3 id="video-titulo">Vídeo Promocional</h3>
+                        </div>
+                        <p id="video-desc" class="media-panel-desc">Recorre los paisajes más espectaculares de Punta Cana: playas, naturaleza y cultura.</p>
+                        <div class="video-frame">
+                            <video controls aria-describedby="video-desc" aria-label="Vídeo promocional de Punta Cana" preload="metadata">
+                                <source src="assets/video/PuntaCana%20video.mp4" type="video/mp4">
+                                <track kind="subtitles" src="assets/subtitles/es.vtt" srclang="es" label="Español" default>
+                                <track kind="subtitles" src="assets/subtitles/en.vtt" srclang="en" label="English">
+                                Tu navegador no soporta el elemento de vídeo. <a href="assets/video/PuntaCana%20video.mp4">Descarga el vídeo aquí</a>.
+                            </video>
+                        </div>
+                    </div>
+                    <!-- AUDIO — compacto -->
+                    <div class="media-panel media-panel--audio" aria-labelledby="audio-titulo">
+                        <div class="audio-deco" aria-hidden="true">
+                            <div class="audio-wave">
+                                <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
+                                <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
+                                <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
+                                <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
+                            </div>
+                        </div>
+                        <div class="media-panel-header">
+                            <span class="media-badge media-badge--audio" aria-hidden="true">♫ Audio</span>
+                            <h3 id="audio-titulo">Sonidos del Caribe</h3>
+                        </div>
+                        <p id="audio-desc" class="media-panel-desc">Cierra los ojos y escucha las olas del mar Caribe, el canto de aves tropicales y la brisa entre las palmeras.</p>
+                        <audio controls aria-describedby="audio-desc" aria-label="Reproducir sonido ambiental de playa en Punta Cana" preload="metadata">
+                            <source src="assets/audio/PuntaCana-Audio.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio. <a href="assets/audio/PuntaCana-Audio.mp3">Descarga el audio aquí</a>.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== SECCIÓN FORMULARIO POSTAL ======
+             WCAG 2.2 (1.3.1, 3.3.2): Formulario con fieldset/legend,
+             labels asociados, aria-required, aria-describedby para errores,
+             y aria-live para feedback dinámico.
+        ====== -->
+        <section id="postal" class="section section-postal" aria-labelledby="postal-titulo">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="postal-titulo" class="section-title">Envía una Postal</h2>
+                    <p class="section-subtitle">Comparte la magia de Punta Cana con tus seres queridos. Elige una imagen y personaliza tu mensaje.</p>
+                </header>
+
+                <!-- Región aria-live para anuncios de estado del formulario -->
+                <div id="form-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+                <form id="postal-form" class="postal-form" novalidate aria-label="Formulario de envío de postal turística">
+                    <div class="postal-layout">
+                        <!-- COLUMNA IZQUIERDA: Selección de imagen -->
+                        <fieldset class="postal-images-fieldset">
+                            <!-- WCAG 2.2 (1.3.1): legend describe el propósito del grupo -->
+                            <legend>Elige una imagen para tu postal</legend>
+                            <div class="postal-images-grid">
+                                <div class="postal-option">
+                                    <input type="radio" name="postal-imagen" id="postal-img-1" value="postal-1" required aria-required="true">
+                                    <!-- WCAG 2.2 (1.1.1, 4.1.2): label envuelve la imagen y texto descriptivo -->
+                                    <label for="postal-img-1">
+                                        <img src="assets/images/postal-1.png" alt="Postal de playa Bávaro con palmera sobre arena blanca" width="300" height="300" loading="lazy">
+                                        <span class="postal-option-text">Playa Bávaro</span>
+                                    </label>
+                                </div>
+                                <div class="postal-option">
+                                    <input type="radio" name="postal-imagen" id="postal-img-2" value="postal-2">
+                                    <label for="postal-img-2">
+                                        <img src="assets/images/postal-2.png" alt="Postal del resort con piscina infinita frente al mar Caribe" width="300" height="300" loading="lazy">
+                                        <span class="postal-option-text">Resort Caribeño</span>
+                                    </label>
+                                </div>
+                                <div class="postal-option">
+                                    <input type="radio" name="postal-imagen" id="postal-img-3" value="postal-3">
+                                    <label for="postal-img-3">
+                                        <img src="assets/images/postal-3.png" alt="Postal del camino de palmeras con flores tropicales hacia la playa" width="300" height="300" loading="lazy">
+                                        <span class="postal-option-text">Paseo Tropical</span>
+                                    </label>
+                                </div>
+                                <div class="postal-option">
+                                    <input type="radio" name="postal-imagen" id="postal-img-4" value="postal-4">
+                                    <label for="postal-img-4">
+                                        <img src="assets/images/postal-4.png" alt="Postal de catamarán navegando en aguas turquesa de Punta Cana" width="300" height="300" loading="lazy">
+                                        <span class="postal-option-text">Aventura en Catamarán</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Mensaje de error para la selección de imagen -->
+                            <p id="imagen-error" class="field-error" role="alert" hidden>Por favor, selecciona una imagen para tu postal.</p>
+                        </fieldset>
+
+                        <!-- COLUMNA DERECHA: Datos del remitente y mensaje -->
+                        <fieldset class="postal-data-fieldset">
+                            <legend>Datos de la postal</legend>
+                            <div class="form-group">
+                                <!-- WCAG 2.2 (1.3.1, 3.3.2): Cada input tiene label asociado -->
+                                <label for="postal-nombre">Tu nombre <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="postal-nombre" name="nombre"
+                                       required aria-required="true"
+                                       aria-describedby="nombre-error"
+                                       autocomplete="name"
+                                       placeholder="Escribe tu nombre">
+                                <p id="nombre-error" class="field-error" role="alert" hidden>Por favor, introduce tu nombre.</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-email">Correo del destinatario <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="email" id="postal-email" name="email"
+                                       required aria-required="true"
+                                       aria-describedby="email-error"
+                                       autocomplete="email"
+                                       placeholder="correo@ejemplo.com">
+                                <p id="email-error" class="field-error" role="alert" hidden>Por favor, introduce un correo electrónico válido.</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-destinatario">Nombre del destinatario <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="postal-destinatario" name="destinatario"
+                                       required aria-required="true"
+                                       aria-describedby="destinatario-error"
+                                       placeholder="¿A quién va dirigida?">
+                                <p id="destinatario-error" class="field-error" role="alert" hidden>Por favor, introduce el nombre del destinatario.</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-mensaje">Tu mensaje <span class="required-mark" aria-hidden="true">*</span></label>
+                                <textarea id="postal-mensaje" name="mensaje" rows="5"
+                                          required aria-required="true"
+                                          aria-describedby="mensaje-error"
+                                          placeholder="Escribe un bonito mensaje desde Punta Cana..."></textarea>
+                                <p id="mensaje-error" class="field-error" role="alert" hidden>Por favor, escribe un mensaje para tu postal.</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit" id="btn-enviar-postal">
+                                <span aria-hidden="true">✉️</span> Enviar Postal
+                            </button>
+                        </fieldset>
+                    </div>
+                </form>
+
+                <!-- Modal de confirmación (se muestra tras enviar con éxito) -->
+                <div id="postal-confirmacion" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" hidden>
+                    <div class="modal-content">
+                        <h3 id="modal-titulo">¡Postal Enviada!</h3>
+                        <p id="modal-mensaje">Tu postal desde Punta Cana ha sido enviada con éxito.</p>
+                        <div class="modal-postal-preview" id="modal-preview" aria-label="Vista previa de la postal enviada"></div>
+                        <button type="button" class="btn btn-primary" id="modal-cerrar" autofocus>Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         WCAG 2.2: Contiene el logo de conformidad W3C (nivel AA).
+         <footer> con role="contentinfo" implícito.
+    ============================================================ -->
+    <footer class="site-footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h2 class="footer-title">Punta Cana</h2>
+                <p>Sitio web turístico creado como proyecto académico de la asignatura Multimedia — Universidad Rey Juan Carlos.</p>
+            </div>
+            <div class="footer-col">
+                <h2 class="footer-title">Navegación</h2>
+                <nav aria-label="Navegación del pie de página">
+                    <ul class="footer-nav" role="list">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre">Descubre</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#multimedia">Multimedia</a></li>
+                        <li><a href="#postal">Enviar Postal</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-col footer-col--conformance">
+                <h2 class="footer-title">Accesibilidad</h2>
+                <p>Este sitio web cumple con las pautas WCAG 2.2 nivel AA del W3C.</p>
+                <!-- WCAG 2.2: Logo de conformidad W3C nivel AA -->
+                <a href="https://www.w3.org/WAI/WCAG2AA-Conformance"
+                   title="Explicación de la conformidad WCAG 2.2 Nivel AA"
+                   target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v.png"
+                         alt="Nivel de Conformidad Doble-A de las Directrices de Accesibilidad para el Contenido Web 2.2 del W3C"
+                         width="88" height="31"
+                         class="conformance-logo">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Punta Cana Turismo — Proyecto académico Multimedia, URJC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
